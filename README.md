@@ -109,7 +109,7 @@ Python을 학습하면서 배운 문법과 개념을 하나의 프로그램에 �
 ### 2-3. 예상 프로젝트 파일 구조
 
 ```text
-Korean-Place-Name-Quiz/
+korea-location-quiz/
 │
 ├── main.py
 ├── state.json
@@ -165,6 +165,9 @@ Korean-Place-Name-Quiz/
 
 ```bash
 python --version
+
+# 결과
+Python 3.15.2
 ```
 
 Python 버전이 출력되면 정상적으로 설치된 것이다.
@@ -178,8 +181,8 @@ https://www.python.org/
 프로젝트를 관리할 폴더를 생성한다.
 
 ```bash
-mkdir Korean-Place-Name-Quiz
-cd Korean-Place-Name-Quiz
+mkdir korea-location-quiz
+cd korea-location-quiz
 ```
 
 Visual Studio Code에서 해당 폴더를 연다.
@@ -192,6 +195,9 @@ code .
 
 ```python
 print("한국 지명 맞추기 퀴즈")
+
+# 결과
+한국 지명 맞추기 퀴즈
 ```
 
 ### 1-3. Git 저장소 생성
@@ -208,12 +214,27 @@ git init
 
 ```bash
 git status
+
+# 결과
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        main.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 파일을 스테이징하고 첫 번째 커밋을 생성한다.
 
 ```bash
-git add main.py
+git add .
 git commit -m "Initial commit: 프로젝트 시작"
 ```
 
@@ -1808,7 +1829,7 @@ git clone 저장소주소
 복제한 폴더로 이동한다.
 
 ```bash
-cd Korean-Place-Name-Quiz
+cd korea-location-quiz
 ```
 
 이후 프로그램을 실행한다.
