@@ -4,6 +4,41 @@ class Quiz:
         self.choices = choices
         self.answer = answer
 
+class QuizGame:
+    def __init__(self, quizzes):
+        self.quizzes = quizzes
+        self.high_score = 0
+
+    def show_menu(self):
+        print("\n====================================")
+        print("       한국 지명 맞추기 퀴즈")
+        print("====================================")
+        print("1. 퀴즈 풀기")
+        print("2. 퀴즈 추가")
+        print("3. 퀴즈 목록 확인")
+        print("4. 최고 점수 확인")
+        print("5. 프로그램 종료")
+
+    def run(self):
+        while True:
+            self.show_menu()
+
+            choice = input("메뉴를 선택하세요: ")
+
+            if choice == "1":
+                print("퀴즈 풀기")
+            elif choice == "2":
+                print("퀴즈 추가")
+            elif choice == "3":
+                print("퀴즈 목록 확인")
+            elif choice == "4":
+                print("최고 점수 확인")
+            elif choice == "5":
+                print("프로그램을 종료합니다.")
+                break
+            else:
+                print("올바른 메뉴 번호를 입력하세요.")
+
 quizzes = [
     Quiz(
         "대한민국의 수도는?",
@@ -35,3 +70,6 @@ quizzes = [
 for quiz in quizzes:
     print(quiz.question)
     print(quiz.choices)
+
+game = QuizGame(quizzes)
+game.run()
