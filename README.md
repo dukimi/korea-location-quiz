@@ -405,12 +405,13 @@ print(quiz1.answer)
 ### 📸 스크린샷 촬영
 
 `Quiz` 클래스 코드와 객체 생성 결과가 함께 보이도록 캡처한다.
+(아래 첨부)
 
 ### 📌 Git 커밋
 
 ```bash
 git add main.py
-git commit -m "Feature: Quiz 클래스 구현"
+git commit -m "2-4 객체 생성 및 확인"
 ```
 
 ---
