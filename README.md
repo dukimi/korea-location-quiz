@@ -494,12 +494,13 @@ for quiz in quizzes:
 ### 📸 스크린샷 촬영
 
 기본 퀴즈 데이터와 실행 결과가 보이도록 캡처한다.
+(캡처사진첨부)
 
 ### 📌 Git 커밋
 
 ```bash
 git add main.py
-git commit -m "Feature: 기본 퀴즈 데이터 등록"
+git commit -m "3-3 반복문실습"
 ```
 
 ---
