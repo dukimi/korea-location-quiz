@@ -57,8 +57,21 @@ class QuizGame:
     # 퀴즈 플레이
     def play_quiz(self):
         score = 0
+        
+        while True:                                          # 1. 무한 반복 시작
+            try:
+                count = int(input("몇 문제를 풀겠습니까? "))  # 2. 입력 받기
+            except ValueError:
+                print("숫자만 입력해주세요.")
+                continue                                     # 3. 숫자 아니면 다시 위로
 
-        selected_quizzes = random.sample(self.quizzes, len(self.quizzes))
+            if 1 <= count <= len(self.quizzes):             # 4. 유효한 범위면
+                break                                        #    루프 탈출!
+            
+            print(f"1에서 {len(self.quizzes)} 사이의 숫자를 입력해주세요.")
+            # 5. 범위 벗어나면 다시 위로 돌아가서 입력받음
+
+        selected_quizzes = random.sample(self.quizzes, count)
 
         for quiz in selected_quizzes:
             print("\n" + quiz.question)
