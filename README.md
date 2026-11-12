@@ -1066,12 +1066,13 @@ elif choice == "3":
 ### 📸 스크린샷 촬영
 
 기본 문제와 사용자가 추가한 문제가 함께 표시되는 화면을 캡처한다.
+(첨부할것)
 
 ### 📌 Git 커밋
 
 ```bash
 git add main.py
-git commit -m "Feature: 퀴즈 목록 확인 기능"
+git commit -m "Step7: 퀴즈 목록 확인 기능"
 ```
 
 ---

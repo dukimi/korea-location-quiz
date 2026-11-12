@@ -36,6 +36,7 @@ class QuizGame:
                 self.add_quiz()
             elif choice == "3":
                 print("퀴즈 목록 확인")
+                self.show_quizzes()
             elif choice == "4":
                 print("최고 점수 확인")
             elif choice == "5":
@@ -80,6 +81,15 @@ class QuizGame:
         self.quizzes.append(quiz)
 
         print("퀴즈가 추가되었습니다.")
+
+    def show_quizzes(self):
+        print("\n===== 등록된 퀴즈 목록 =====")
+
+        for i, quiz in enumerate(self.quizzes, start=1):
+            print(f"\n[{i}] {quiz.question}")
+
+            for number, choice in enumerate(quiz.choices, start=1):
+                print(f"{number}. {choice}")
 
 
 quizzes = [
