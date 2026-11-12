@@ -2,10 +2,11 @@ import json
 import random
 
 class Quiz:
-    def __init__(self, question, choices, answer):
+    def __init__(self, question, choices, answer, hint=""):
         self.question = question
         self.choices = choices
         self.answer = answer
+        self.hint = hint
 
 class QuizGame:
     def __init__(self, quizzes):
@@ -57,7 +58,7 @@ class QuizGame:
     # 퀴즈 플레이
     def play_quiz(self):
         score = 0
-        
+
         while True:                                          # 1. 무한 반복 시작
             try:
                 count = int(input("몇 문제를 풀겠습니까? "))  # 2. 입력 받기
@@ -82,6 +83,10 @@ class QuizGame:
             while True:
                 answer = input("정답 번호를 입력하세요: ")
 
+                if answer == "h":
+                    print(f"힌트: {quiz.hint}")
+                    continue
+                
                 if answer.isdigit():
                     answer = int(answer)
 
@@ -180,27 +185,32 @@ quizzes = [
     Quiz(
         "대한민국의 수도는?",
         ["서울특별시", "부산광역시", "대구광역시", "전남광주통합특별시"],
-        1
+        1,
+        "한강이 흐르는 도시에요."
     ),
     Quiz(
         "대한민국에서 가장 넓은 시는?",
         ["대전광역시", "전남광주통합특별시", "부산광역시", "울산광역시"],
-        2
+        2,
+        "원래는 전라남도와 광주광역시였으나 최근에 통합되었어요."
     ),
     Quiz(
         "제주특별자치도의 중심 도시는?",
         ["서귀포시", "제주시", "목포시", "창원시"],
-        2
+        2,
+        "이름 그대로에요."
     ),
     Quiz(
         "대한민국의 동쪽에 위치한 대표적인 광역시는?",
         ["인천광역시", "부산광역시", "울산광역시", "대전광역시"],
-        3
+        3,
+        "근처 도로 경상남도가 있고, 부산광역시와 접해 있어요."
     ),
     Quiz(
         "경상남도의 도청 소재지는?",
         ["거제시", "안동시", "여수시", "창원시"],
-        4
+        4,
+        "경상남도에서 가장 큰 도시에요."
     )
 ]
 
