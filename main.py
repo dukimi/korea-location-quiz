@@ -19,6 +19,7 @@ class QuizGame:
         print("4. 최고 점수 확인")
         print("5. 프로그램 종료")
 
+    # 퀴즈 플레이
     def run(self):
         while True:
             self.show_menu()
@@ -39,12 +40,14 @@ class QuizGame:
                 self.show_quizzes()
             elif choice == "4":
                 print("최고 점수 확인")
+                self.show_high_score()
             elif choice == "5":
                 print("프로그램을 종료합니다.")
                 break
             else:
                 print("올바른 메뉴 번호를 입력하세요.")
 
+    # 퀴즈 플레이
     def play_quiz(self):
         score = 0
 
@@ -65,6 +68,7 @@ class QuizGame:
         print(f"최종 점수: {score} / {len(self.quizzes)}")
         return score
 
+    # 퀴즈 추가
     def add_quiz(self):
         question = input("문제를 입력하세요: ")
 
@@ -82,6 +86,7 @@ class QuizGame:
 
         print("퀴즈가 추가되었습니다.")
 
+    # 등록된 퀴즈 출력
     def show_quizzes(self):
         print("\n===== 등록된 퀴즈 목록 =====")
 
@@ -90,6 +95,11 @@ class QuizGame:
 
             for number, choice in enumerate(quiz.choices, start=1):
                 print(f"{number}. {choice}")
+
+    # 최고 점수
+    def show_high_score(self):
+        print("\n===== 최고 점수 =====")
+        print(f"최고 점수: {self.high_score}")
 
 
 quizzes = [
@@ -119,10 +129,6 @@ quizzes = [
         4
     )
 ]
-
-for quiz in quizzes:
-    print(quiz.question)
-    print(quiz.choices)
 
 game = QuizGame(quizzes)
 game.run()
