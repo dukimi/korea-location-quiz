@@ -2426,7 +2426,7 @@ def show_score_history(self):
 
 ```bash
 git add main.py state.json
-git commit -m "Bonus: 점수 기록 히스토리 기능"
+git commit -m "Step17: 점수 기록 히스토리 기능"
 ```
 
 ---
