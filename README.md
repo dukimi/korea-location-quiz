@@ -598,13 +598,13 @@ game.run()
 ### 📸 스크린샷 촬영
 
 메인 메뉴가 출력된 화면과 각 메뉴 선택에 따른 테스트 화면을 캡처한다.
-(파일첨부) (261111)
+(파일첨부) (-261111)
 
 ### 📌 Git 커밋
 
 ```bash
 git add main.py
-git commit -m "Feature: QuizGame 클래스 및 메인 메뉴 구현"
+git commit -m "Step4 실습"
 ```
 
 ---
