@@ -781,9 +781,9 @@ git branch -d feature/quiz-play
 
 **퀴즈 실행 및 브랜치 작업 결과**
 
-![퀴즈 출력, 정오답 및 최종 점수](screenshots/step5-123%20퀴즈출력과정오답최종점수출력.png)
+![퀴즈 출력, 정오답 및 최종 점수](screenshots/step5-123%20퀴즈출력과%20정오답%20최종점수출력.png)
 
-![브랜치 생성 및 병합 결과](screenshots/step5-4_브랜치생성및병합결과.png)
+![브랜치 생성 및 병합 결과](screenshots/step5-4%20브랜치%20생%20성및%20병합%20결과.png)
 
 ### 📌 Git 커밋
 
