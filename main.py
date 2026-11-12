@@ -25,27 +25,29 @@ class QuizGame:
     def run(self):
         while True:
             self.show_menu()
-            self.load_data()
 
-            choice = input("메뉴를 선택하세요: ")
+            try:
+                choice = int(input("숫자를 입력하세요: "))
+            except ValueError:
+                print("숫자만 입력해주세요.")
 
-            if choice == "1":
+            if choice == 1:
                 print("퀴즈 풀기")
                 score = self.play_quiz()
                 if score > self.high_score:
                     self.high_score = score
                     self.save_data()
                     print("새로운 최고 점수를 달성했습니다!")
-            elif choice == "2":
+            elif choice == 2:
                 print("퀴즈 추가")
                 self.add_quiz()
-            elif choice == "3":
+            elif choice == 3:
                 print("퀴즈 목록 확인")
                 self.show_quizzes()
-            elif choice == "4":
+            elif choice == 4:
                 print("최고 점수 확인")
                 self.show_high_score()
-            elif choice == "5":
+            elif choice == 5:
                 print("프로그램을 종료합니다.")
                 break
             else:
@@ -61,9 +63,18 @@ class QuizGame:
             for i, choice in enumerate(quiz.choices, start=1):
                 print(f"{i}. {choice}")
 
-            answer = input("정답을 입력하세요: ")
+            while True:
+                answer = input("정답 번호를 입력하세요: ")
 
-            if answer == str(quiz.answer):
+                if answer.isdigit():
+                    answer = int(answer)
+
+                    if 1 <= answer <= 4:
+                        break
+
+                print("1부터 4 사이의 숫자를 입력해주세요.")
+
+            if answer == quiz.answer:
                 print("정답입니다!")
                 score += 1
             else:
@@ -74,7 +85,10 @@ class QuizGame:
 
     # 퀴즈 추가
     def add_quiz(self):
-        question = input("문제를 입력하세요: ")
+        question = input("문제를 입력하세요: ").strip()
+
+        if not question:
+            print("문제 내용을 입력해주세요.")
 
         choices = []
 
@@ -174,5 +188,11 @@ quizzes = [
     )
 ]
 
-game = QuizGame(quizzes)
-game.run()
+if __name__ == "__main__":
+    try:
+        game = QuizGame(quizzes)
+        game.load_data()
+        game.run()
+
+    except (EOFError, KeyboardInterrupt):
+        print("\n프로그램을 종료합니다.")
