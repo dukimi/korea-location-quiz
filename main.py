@@ -33,6 +33,7 @@ class QuizGame:
                     print("새로운 최고 점수를 달성했습니다!")
             elif choice == "2":
                 print("퀴즈 추가")
+                self.add_quiz()
             elif choice == "3":
                 print("퀴즈 목록 확인")
             elif choice == "4":
@@ -62,6 +63,23 @@ class QuizGame:
 
         print(f"최종 점수: {score} / {len(self.quizzes)}")
         return score
+
+    def add_quiz(self):
+        question = input("문제를 입력하세요: ")
+
+        choices = []
+
+        for i in range(4):
+            choice = input(f"{i + 1}번 선택지: ")
+            choices.append(choice)
+
+        answer = int(input("정답 번호(1~4): "))
+
+        quiz = Quiz(question, choices, answer)
+
+        self.quizzes.append(quiz)
+
+        print("퀴즈가 추가되었습니다.")
 
 
 quizzes = [

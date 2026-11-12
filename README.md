@@ -775,13 +775,155 @@ git branch -d feature/quiz-play
 
 ```bash
 git add main.py
-git commit -m "Feature: 퀴즈 실행 기능 완성"
+git commit -m "Step5: 퀴즈 실행 기능 완성"
 ```
 
 브랜치 병합 후에는 다음 명령어로 결과를 확인한다.
 
 ```bash
 git log --oneline --graph --all
+
+# 결과
+* db71cb4 (HEAD -> main, origin/main, origin/HEAD) Step5: 퀴즈 실행 기능 완성
+* eacb326 (origin/feature/quiz-play) Step5: 퀴즈 실행 및 점수 계산 기능
+* 3c50ac4 step4 메인메뉴출력확인
+* b66ef0f Step4: QuizGame 클래스 및 메인 메뉴 구현
+* 83edd24 readme수정
+* b1e18da 3-3 반복문실습
+* 3cfa20e 2-4 객체생성 및 확인
+* 939e9b0 261108
+* 8da3d2a Add ScreenshotFolder
+* 98b9d8d Created main.py
+:
+* db71cb4 (HEAD -> main, origin/main, origin/HEAD) Step5: 퀴즈 실행 기능 완성
+* eacb326 (origin/feature/quiz-play) Step5: 퀴즈 실행 및 점수 계산 기능
+* 3c50ac4 step4 메인메뉴출력확인
+* b66ef0f Step4: QuizGame 클래스 및 메인 메뉴 구현
+* 83edd24 readme수정
+* b1e18da 3-3 반복문실습
+* 3cfa20e 2-4 객체생성 및 확인
+* 939e9b0 261108
+* 8da3d2a Add ScreenshotFolder
+* 98b9d8d Created main.py
+* 93a8ff2 First Commit
+:
+* db71cb4 (HEAD -> main, origin/main, origin/HEAD) Step5: 퀴즈 실행 기능 완성
+* eacb326 (origin/feature/quiz-play) Step5: 퀴즈 실행 및 점수 계산 기능
+* 3c50ac4 step4 메인메뉴출력확인
+* b66ef0f Step4: QuizGame 클래스 및 메인 메뉴 구현
+* 83edd24 readme수정
+* b1e18da 3-3 반복문실습
+* 3cfa20e 2-4 객체생성 및 확인
+* 939e9b0 261108
+* 8da3d2a Add ScreenshotFolder
+* 98b9d8d Created main.py
+* 93a8ff2 First Commit
+~
+(END)
+* db71cb4 (HEAD -> main, origin/main, origin/HEAD) Step5: 퀴즈 실행 기능 완성
+* eacb326 (origin/feature/quiz-play) Step5: 퀴즈 실행 및 점수 계산 기능
+* 3c50ac4 step4 메인메뉴출력확인
+* b66ef0f Step4: QuizGame 클래스 및 메인 메뉴 구현
+* 83edd24 readme수정
+* b1e18da 3-3 반복문실습
+* 3cfa20e 2-4 객체생성 및 확인
+* 939e9b0 261108
+* 8da3d2a Add ScreenshotFolder
+* 98b9d8d Created main.py
+* 93a8ff2 First Commit
+~
+~
+(END)
+* db71cb4 (HEAD -> main, origin/main, origin/HEAD) Step5: 퀴즈 실행 기능 완성
+* eacb326 (origin/feature/quiz-play) Step5: 퀴즈 실행 및 점수 계산 기능
+* 3c50ac4 step4 메인메뉴출력확인
+* b66ef0f Step4: QuizGame 클래스 및 메인 메뉴 구현
+* 83edd24 readme수정
+* b1e18da 3-3 반복문실습
+* 3cfa20e 2-4 객체생성 및 확인
+* 939e9b0 261108
+* 8da3d2a Add ScreenshotFolder
+* 98b9d8d Created main.py
+* 93a8ff2 First Commit
+~
+~
+~
+(END)
+* db71cb4 (HEAD -> main, origin/main, origin/HEAD) Step5: 퀴즈 실행 기능 완성
+* eacb326 (origin/feature/quiz-play) Step5: 퀴즈 실행 및 점수 계산 기능
+* 3c50ac4 step4 메인메뉴출력확인
+* b66ef0f Step4: QuizGame 클래스 및 메인 메뉴 구현
+* 83edd24 readme수정
+* b1e18da 3-3 반복문실습
+* 3cfa20e 2-4 객체생성 및 확인
+* 939e9b0 261108
+* 8da3d2a Add ScreenshotFolder
+* 98b9d8d Created main.py
+* 93a8ff2 First Commit
+~
+~
+~
+~
+(END)
+* db71cb4 (HEAD -> main, origin/main, origin/HEAD) Step5: 퀴즈 실행 기능 완성
+* eacb326 (origin/feature/quiz-play) Step5: 퀴즈 실행 및 점수 계산 기능
+* 3c50ac4 step4 메인메뉴출력확인
+* b66ef0f Step4: QuizGame 클래스 및 메인 메뉴 구현
+* 83edd24 readme수정
+* b1e18da 3-3 반복문실습
+* 3cfa20e 2-4 객체생성 및 확인
+* 939e9b0 261108
+* 8da3d2a Add ScreenshotFolder
+* 98b9d8d Created main.py
+* 93a8ff2 First Commit
+~
+~
+(END)
+* db71cb4 (HEAD -> main, origin/main, origin/HEAD) Step5: 퀴즈 실행 기능 완성
+* eacb326 (origin/feature/quiz-play) Step5: 퀴즈 실행 및 점수 계산 기능
+* 3c50ac4 step4 메인메뉴출력확인
+* b66ef0f Step4: QuizGame 클래스 및 메인 메뉴 구현
+* 83edd24 readme수정
+* b1e18da 3-3 반복문실습
+* 3cfa20e 2-4 객체생성 및 확인
+* 939e9b0 261108
+* 8da3d2a Add ScreenshotFolder
+* 98b9d8d Created main.py
+* 93a8ff2 First Commit
+~
+(END)
+* db71cb4 (HEAD -> main, origin/main, origin/HEAD) Step5: 퀴즈 실행 기능 완성
+* eacb326 (origin/feature/quiz-play) Step5: 퀴즈 실행 및 점수 계산 기능
+* 3c50ac4 step4 메인메뉴출력확인
+* b66ef0f Step4: QuizGame 클래스 및 메인 메뉴 구현
+* 83edd24 readme수정
+* b1e18da 3-3 반복문실습
+* 3cfa20e 2-4 객체생성 및 확인
+* 939e9b0 261108
+* 8da3d2a Add ScreenshotFolder
+* 98b9d8d Created main.py
+* 93a8ff2 First Commit
+(END)
+* db71cb4 (HEAD -> main, origin/main, origin/HEAD) Step5: 퀴즈 실행 기능 완성
+* eacb326 (origin/feature/quiz-play) Step5: 퀴즈 실행 및 점수 계산 기능
+* 3c50ac4 step4 메인메뉴출력확인
+* b66ef0f Step4: QuizGame 클래스 및 메인 메뉴 구현
+* 83edd24 readme수정
+* b1e18da 3-3 반복문실습
+* 3cfa20e 2-4 객체생성 및 확인
+* 939e9b0 261108
+* 8da3d2a Add ScreenshotFolder
+* 98b9d8d Created main.py
+:
+* db71cb4 (HEAD -> main, origin/main, origin/HEAD) Step5: 퀴즈 실행 기능 완성
+* eacb326 (origin/feature/quiz-play) Step5: 퀴즈 실행 및 점수 계산 기능
+* 3c50ac4 step4 메인메뉴출력확인
+* b66ef0f Step4: QuizGame 클래스 및 메인 메뉴 구현
+* 83edd24 readme수정
+* b1e18da 3-3 반복문실습
+* 3cfa20e 2-4 객체생성 및 확인
+* 939e9b0 261108
+* 8da3d2a Add ScreenshotFolder
 ```
 
 ---
@@ -861,18 +1003,18 @@ elif choice == "2":
 - 문제 내용이 정상적으로 입력되는가?
 - 선택지 4개가 저장되는가?
 - 정답 번호가 저장되는가?
-- 새로운 퀴즈가 기존 목록에 추가되는가?
 - 추가한 문제가 퀴즈 목록에 표시되는가?
 
 ### 📸 스크린샷 촬영
 
 퀴즈 추가 과정을 보여주는 화면과 추가 후 목록에 반영된 화면을 캡처한다.
+(추가하기)
 
 ### 📌 Git 커밋
 
 ```bash
 git add main.py
-git commit -m "Feature: 사용자 퀴즈 추가 기능"
+git commit -m "Step6: 사용자 퀴즈 추가 기능"
 ```
 
 ---
