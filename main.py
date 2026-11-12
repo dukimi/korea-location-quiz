@@ -27,6 +27,10 @@ class QuizGame:
 
             if choice == "1":
                 print("퀴즈 풀기")
+                score = self.play_quiz()
+                if score > self.high_score:
+                    self.high_score = score
+                    print("새로운 최고 점수를 달성했습니다!")
             elif choice == "2":
                 print("퀴즈 추가")
             elif choice == "3":
@@ -38,6 +42,27 @@ class QuizGame:
                 break
             else:
                 print("올바른 메뉴 번호를 입력하세요.")
+
+    def play_quiz(self):
+        score = 0
+
+        for quiz in self.quizzes:
+            print("\n" + quiz.question)
+
+            for i, choice in enumerate(quiz.choices, start=1):
+                print(f"{i}. {choice}")
+
+            answer = input("정답을 입력하세요: ")
+
+            if answer == str(quiz.answer):
+                print("정답입니다!")
+                score += 1
+            else:
+                print("오답입니다.")
+
+        print(f"최종 점수: {score} / {len(self.quizzes)}")
+        return score
+
 
 quizzes = [
     Quiz(
@@ -73,3 +98,4 @@ for quiz in quizzes:
 
 game = QuizGame(quizzes)
 game.run()
+

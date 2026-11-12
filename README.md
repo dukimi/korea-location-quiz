@@ -604,7 +604,7 @@ game.run()
 
 ```bash
 git add main.py
-git commit -m "Step4 실습"
+git commit -m "Step4: QuizGame 클래스 및 메인 메뉴 구현"
 ```
 
 ---
@@ -667,7 +667,7 @@ def add(a, b):
 def play_quiz(self):
     score = 0
 
-    # 문제 출제 및 정답 확인
+    # 문제 출제 및 정답 확인(생략)
 
     return score
 ```
@@ -709,6 +709,7 @@ for number, choice in enumerate(choices, start=1):
 ```
 
 `start=1`을 지정하면 번호를 1부터 출력할 수 있다.
+실제 프로그램엔 아직 필요하지 않아 넣지 않았다.
 
 ### 5-5. Git 브랜치 생성
 
