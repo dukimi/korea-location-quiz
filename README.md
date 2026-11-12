@@ -106,7 +106,7 @@ Python을 학습하면서 배운 문법과 개념을 하나의 프로그램에 �
 
 이처럼 역할을 나누면 하나의 클래스가 지나치게 많은 기능을 담당하는 것을 방지할 수 있다.
 
-### 2-3. 예상 프로젝트 파일 구조
+### 2-3. 프로젝트 파일 구조
 
 ```text
 korea-location-quiz/
@@ -116,12 +116,6 @@ korea-location-quiz/
 ├── README.md
 │
 ├── screenshots/
-│   ├── 01_main_menu.png
-│   ├── 02_quiz_play.png
-│   ├── 03_quiz_add.png
-│   ├── 04_quiz_list.png
-│   ├── 05_high_score.png
-│   └── 06_data_save.png
 │
 └── .gitignore
 ```
@@ -286,6 +280,15 @@ git commit
 3. `git status` 및 첫 번째 커밋 결과
 
 스크린샷은 `screenshots/` 폴더에 저장한다. 폴더가 없다면 먼저 생성한다.
+
+**개발 환경 및 Git 확인 화면**
+
+![Python 실행 및 버전 확인](screenshots/working_mainpy_printVer.png)
+
+![Git 첫 커밋](screenshots/2firstCommit.png)
+
+![Git 상태 확인](screenshots/3_gitstatus.png)
+
 ======================261108 18:35
 ### 📌 Git 커밋
 
@@ -405,7 +408,8 @@ print(quiz1.answer)
 ### 📸 스크린샷 촬영
 
 `Quiz` 클래스 코드와 객체 생성 결과가 함께 보이도록 캡처한다.
-(아래 첨부)
+
+![Quiz 객체 생성 및 확인](screenshots/2-4객체생성확인.png)
 
 ### 📌 Git 커밋
 
@@ -494,7 +498,8 @@ for quiz in quizzes:
 ### 📸 스크린샷 촬영
 
 기본 퀴즈 데이터와 실행 결과가 보이도록 캡처한다.
-(캡처사진첨부)
+
+![기본 퀴즈 데이터 반복문 확인](screenshots/3-3반복문데이터확인.png)
 
 ### 📌 Git 커밋
 
@@ -598,7 +603,10 @@ game.run()
 ### 📸 스크린샷 촬영
 
 메인 메뉴가 출력된 화면과 각 메뉴 선택에 따른 테스트 화면을 캡처한다.
-(파일첨부) (-261111)
+
+![메인 메뉴 출력 확인](screenshots/step4메인메뉴출력확인.png)
+
+(-261111)
 
 ### 📌 Git 커밋
 
@@ -770,6 +778,12 @@ git branch -d feature/quiz-play
 2. 정답과 오답을 입력한 화면
 3. 최종 점수 출력 화면
 4. 브랜치 생성 및 병합 결과
+
+**퀴즈 실행 및 브랜치 작업 결과**
+
+![퀴즈 출력, 정오답 및 최종 점수](screenshots/step5-123%20퀴즈출력과정오답최종점수출력.png)
+
+![브랜치 생성 및 병합 결과](screenshots/step5-4_브랜치생성및병합결과.png)
 
 ### 📌 Git 커밋
 
@@ -1008,7 +1022,10 @@ elif choice == "2":
 ### 📸 스크린샷 촬영
 
 퀴즈 추가 과정을 보여주는 화면과 추가 후 목록에 반영된 화면을 캡처한다.
-(추가하기)
+
+![퀴즈 추가 과정](screenshots/step6-1%20퀴즈추가.png)
+
+![퀴즈 추가 후 목록 확인](screenshots/step6-2%20퀴즈목록추가확인.png)
 
 ### 📌 Git 커밋
 
@@ -1066,7 +1083,8 @@ elif choice == "3":
 ### 📸 스크린샷 촬영
 
 기본 문제와 사용자가 추가한 문제가 함께 표시되는 화면을 캡처한다.
-(첨부할것)
+
+![퀴즈 목록 표시](screenshots/step7%20퀴즈%20목록표시.png)
 
 ### 📌 Git 커밋
 
@@ -1568,6 +1586,10 @@ PS C:\Users\dukimi\Desktop\대학모음\devfiles\korea-location-quiz> & 'C:\User
 # 껏다가 켜도 최고점수가 유지됨.
 ```
 
+**JSON 파일 저장 결과**
+
+![JSON 파일 저장 확인](screenshots/step9%20json파일저장.png)
+
 ### 📌 Git 커밋
 
 ```bash
@@ -1864,7 +1886,10 @@ git push -u origin main
 ### 📸 스크린샷 촬영
 
 GitHub 저장소 메인 화면과 README가 표시된 화면을 캡처한다.
-(완료)
+
+![GitHub 저장소 메인 화면](screenshots/step12%20github메인.png)
+
+![GitHub 커밋 기록](screenshots/step12%20커밋기록.png)
 ---
 
 # 4. 보너스 과제
@@ -2579,7 +2604,7 @@ git log --oneline
 git log --oneline --graph --all
 ```
 
-### 📸 스크린샷 촬영
+### 실행 결과
 
 Git 실습 결과를 확인할 수 있도록 다음 화면을 캡처한다.
 
@@ -2588,6 +2613,34 @@ Git 실습 결과를 확인할 수 있도록 다음 화면을 캡처한다.
 3. 브랜치 생성 및 병합 결과
 4. `git clone` 실행 결과
 5. `git pull` 실행 결과
+
+```bash
+PS C:\Users\dukimi\Desktop\test> git clone https://github.com/dukimi/korea-location-quiz.git
+Cloning into 'korea-location-quiz'...
+remote: Enumerating objects: 106, done.
+remote: Counting objects: 100% (106/106), done.
+remote: Compressing objects: 100% (70/70), done.
+remote: Total 106 (delta 45), reused 95 (delta 34), pack-reused 0 (from 0)
+Receiving objects: 100% (106/106), 1.06 MiB | 4.23 MiB/s, done.
+Resolving deltas: 100% (45/45), done.
+PS C:\Users\dukimi\Desktop\test> cd korea-location-quiz
+PS C:\Users\dukimi\Desktop\test\korea-location-quiz> python main.py
+
+====================================
+       한국 지명 맞추기 퀴즈
+====================================
+1. 퀴즈 풀기
+2. 퀴즈 추가
+3. 퀴즈 목록 확인
+4. 최고 점수 확인
+5. 퀴즈 삭제
+6. 프로그램 종료
+7. 점수 기록 확인
+숫자를 입력하세요: 6
+프로그램을 종료합니다.
+PS C:\Users\dukimi\Desktop\test\korea-location-quiz> git pull
+Already up to date.
+```
 
 ---
 
@@ -2656,74 +2709,7 @@ Git 실습 결과를 확인할 수 있도록 다음 화면을 캡처한다.
 
 ---
 
-# 7. 프로젝트 개발 기록
-
-이 부분은 프로젝트를 개발하면서 실제로 진행한 작업을 시간순으로 기록하는 공간이다.
-
-앞의 개발 단계에는 구현 방법과 필요한 이론을 미리 작성해 두었으며, 이곳에는 실제 작업 과정에서 발생한 일들을 추가한다.
-
-특히 실제로 발생한 오류와 해결 과정, 테스트 결과, 커밋 기록을 중심으로 작성한다.
-
-## 7-1. 개발 진행 상황
-
-| 단계 | 개발 내용 | 진행 상태 |
-|---|---|---|
-| STEP 1 | 개발 환경 및 프로젝트 초기 설정 | 진행 예정 |
-| STEP 2 | Quiz 클래스 구현 | 진행 예정 |
-| STEP 3 | 기본 퀴즈 데이터 등록 | 진행 예정 |
-| STEP 4 | QuizGame 및 메인 메뉴 구현 | 진행 예정 |
-| STEP 5 | 퀴즈 풀기 및 브랜치 활용 | 진행 예정 |
-| STEP 6 | 퀴즈 추가 | 진행 예정 |
-| STEP 7 | 퀴즈 목록 확인 | 진행 예정 |
-| STEP 8 | 최고 점수 확인 | 진행 예정 |
-| STEP 9 | JSON 저장 및 불러오기 | 진행 예정 |
-| STEP 10 | 입력 검증 및 예외 처리 | 진행 예정 |
-| STEP 11 | 전체 기능 점검 및 코드 정리 | 진행 예정 |
-| STEP 12 | README 및 최종 업로드 | 진행 예정 |
-| STEP 13~17 | 보너스 기능 | 진행 예정 |
-
-※ 각 단계의 구현과 테스트가 실제로 완료되면 상태를 변경한다.
-
-## 7-2. 날짜별 개발일지
-
-### 개발일지 1
-
-- **개발 날짜:** 실제 작업 날짜 입력
-- **진행 단계:** STEP 번호 입력
-- **개발 내용:** 실제로 구현한 기능 작성
-- **학습한 내용:** 구현하면서 새롭게 이해한 Python 개념 작성
-- **발생한 문제:** 실제로 발생한 오류 또는 어려움 작성
-- **해결 과정:** 문제를 해결하기 위해 시도한 방법과 해결 결과 작성
-- **실행 결과:** 실제 테스트 결과 작성
-- **Git 기록:** 실제 커밋 메시지 및 해시 작성
-
-### 개발일지 2
-
-- **개발 날짜:** 실제 작업 날짜 입력
-- **진행 단계:** STEP 번호 입력
-- **개발 내용:** 실제로 구현한 기능 작성
-- **학습한 내용:** 구현하면서 새롭게 이해한 Python 개념 작성
-- **발생한 문제:** 실제로 발생한 오류 또는 어려움 작성
-- **해결 과정:** 문제를 해결하기 위해 시도한 방법과 해결 결과 작성
-- **실행 결과:** 실제 테스트 결과 작성
-- **Git 기록:** 실제 커밋 메시지 및 해시 작성
-
-### 개발일지 3
-
-- **개발 날짜:** 실제 작업 날짜 입력
-- **진행 단계:** STEP 번호 입력
-- **개발 내용:** 실제로 구현한 기능 작성
-- **학습한 내용:** 구현하면서 새롭게 이해한 Python 개념 작성
-- **발생한 문제:** 실제로 발생한 오류 또는 어려움 작성
-- **해결 과정:** 문제를 해결하기 위해 시도한 방법과 해결 결과 작성
-- **실행 결과:** 실제 테스트 결과 작성
-- **Git 기록:** 실제 커밋 메시지 및 해시 작성
-
-※ 개발일지는 위 양식을 복사하여 개발할 때마다 추가한다. 실제로 발생하지 않은 오류나 수행하지 않은 작업을 작성하지 않는다.
-
----
-
-# 8. 프로젝트를 마치며
+# 7. 프로젝트를 마치며
 
 이번 프로젝트를 통해 Python의 기초 문법을 실제 프로그램에 적용하고, 하나의 프로그램을 단계적으로 설계하고 구현하는 과정을 경험하고자 한다.
 
