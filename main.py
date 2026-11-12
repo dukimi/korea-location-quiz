@@ -1,4 +1,5 @@
 import json
+import random
 
 class Quiz:
     def __init__(self, question, choices, answer):
@@ -57,7 +58,9 @@ class QuizGame:
     def play_quiz(self):
         score = 0
 
-        for quiz in self.quizzes:
+        selected_quizzes = random.sample(self.quizzes, len(self.quizzes))
+
+        for quiz in selected_quizzes:
             print("\n" + quiz.question)
 
             for i, choice in enumerate(quiz.choices, start=1):
