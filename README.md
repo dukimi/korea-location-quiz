@@ -409,7 +409,7 @@ print(quiz1.answer)
 
 `Quiz` 클래스 코드와 객체 생성 결과가 함께 보이도록 캡처한다.
 
-![Quiz 객체 생성 및 확인](screenshots/2-4객체생성확인.png)
+![Quiz 객체 생성 및 확인](screenshots/2-4객체생성과확인.png)
 
 ### 📌 Git 커밋
 
