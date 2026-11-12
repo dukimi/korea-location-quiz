@@ -1,3 +1,5 @@
+import json
+
 class Quiz:
     def __init__(self, question, choices, answer):
         self.question = question
@@ -23,6 +25,7 @@ class QuizGame:
     def run(self):
         while True:
             self.show_menu()
+            self.load_data()
 
             choice = input("메뉴를 선택하세요: ")
 
@@ -31,6 +34,7 @@ class QuizGame:
                 score = self.play_quiz()
                 if score > self.high_score:
                     self.high_score = score
+                    self.save_data()
                     print("새로운 최고 점수를 달성했습니다!")
             elif choice == "2":
                 print("퀴즈 추가")
@@ -83,6 +87,7 @@ class QuizGame:
         quiz = Quiz(question, choices, answer)
 
         self.quizzes.append(quiz)
+        self.save_data()
 
         print("퀴즈가 추가되었습니다.")
 
@@ -101,6 +106,45 @@ class QuizGame:
         print("\n===== 최고 점수 =====")
         print(f"최고 점수: {self.high_score}")
 
+    # 저장하기 함수
+    def save_data(self):
+        data = {
+            "quizzes": [
+                {
+                    "question": quiz.question,
+                    "choices": quiz.choices,
+                    "answer": quiz.answer
+                }
+                for quiz in self.quizzes
+            ],
+            "high_score": self.high_score
+        }
+
+        with open("state.json", "w", encoding="utf-8") as file:
+            json.dump(data, file, ensure_ascii=False, indent=4)
+
+    # 불러오기 함수
+    def load_data(self):
+        try:
+            with open("state.json", "r", encoding="utf-8") as file:
+                data = json.load(file)
+
+            self.quizzes = [
+                Quiz(
+                    item["question"],
+                    item["choices"],
+                    item["answer"]
+                )
+                for item in data["quizzes"]
+            ]
+
+            self.high_score = data["high_score"]
+
+        except FileNotFoundError:
+            print("저장된 데이터가 없습니다. 기본 데이터를 사용합니다.")
+
+        except json.JSONDecodeError:
+            print("저장 파일이 손상되었습니다. 기본 데이터를 사용합니다.")
 
 quizzes = [
     Quiz(
@@ -132,4 +176,3 @@ quizzes = [
 
 game = QuizGame(quizzes)
 game.run()
-
